@@ -31,6 +31,12 @@ Bon travail.
 ---
 
 - Installation d'un Symfony complet
+- Connecter Symfony à votre base de donnée
+
+```
+# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
+```
+- Créer la base de donnée
 - Créer une entitée formation avec les champs :
     - titre string 255
     - description text
