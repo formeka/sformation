@@ -37,6 +37,6 @@ Bon travail.
     - duree int
     - niveau string 20
     - lieu string 15
-- Créer un controller Home
+- Créer un controller Home avec requete
 - Ajouter Bootstrap 
 - Créer le template de la homepage
