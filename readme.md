@@ -39,23 +39,33 @@ symfony new sformation --webapp
 - Connecter Symfony à votre base de donnée
 
 ```
-# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
+DATABASE_URL="mysql://login:password@127.0.0.1:3306/database?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
 ```
 - Créer la base de donnée
 
 ```
 symfony console doctrine:database:create
+symfony console make:migration ou symfony console doctrine:database:migrations:diff 
+symfony console doctrine:database:migrate
 ```
 
 - Créer une entitée formation avec les champs :
     - titre string 255
     - description text
-    - duree int
+    - duree integer
     - niveau string 20
     - lieu string 15
 
 ```
 symfony console make:entity
+```
+
+- Ajout de **fixtures**(jeu de fausses données)
+
+```
+composer require --dev doctrine/doctrine-fixtures-bundle
+composer require --dev fakerphp/faker
+symfony console doctrine:fixture:load
 ```
 
 - Créer un controller Home avec requete
