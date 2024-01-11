@@ -1,18 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{{ dump(formations) }}
 
-{% for formation in formations %}
-    
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{ formation.titre }}</h5>
-    <p class="card-text">{{ formation.description }}.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+	<section class="d-flex flex-wrap gap-2">
+		{% for formation in formations %}
 
-{% endfor %}
+
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">{{ formation.titre }}</h5>
+
+					<p class="card-text">{{ formation.resume }}.</p>
+					<a href="#" class="btn btn-primary">Details</a>
+				</div>
+			</div>
+
+		{% endfor %}
+
+	</section>
+
 
 {% endblock %}
