@@ -7,14 +7,15 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
 
-class AppFixtures extends Fixture
+class FormationFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create('fr_FR');
         for($i=0; $i<=30; $i++):
             $formation = new Formation();
-            $formation->setTitre($faker->sentence());
+            $formation->setTitre($faker->words(3,true));
+            $formation->setResume($faker->sentence());
             $formation->setDescription($faker->paragraph());
             $formation->setDuree($faker->numberBetween(0, 365));
             $formation->setNiveau($faker->randomElement(['débutant', 'intermediare', 'expert']));

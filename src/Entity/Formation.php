@@ -29,6 +29,9 @@ class Formation
     #[ORM\Column(length: 15)]
     private ?string $lieu = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $resume = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Formation
     public function setLieu(string $lieu): static
     {
         $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    public function getResume(): ?string
+    {
+        return $this->resume;
+    }
+
+    public function setResume(string $resume): static
+    {
+        $this->resume = $resume;
 
         return $this;
     }

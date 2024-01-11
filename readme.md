@@ -51,6 +51,7 @@ symfony console doctrine:database:migrate
 
 - Créer une entitée formation avec les champs :
     - titre string 255
+    - resume text
     - description text
     - duree integer
     - niveau string 20
@@ -66,6 +67,7 @@ symfony console make:entity
 composer require --dev doctrine/doctrine-fixtures-bundle
 composer require --dev fakerphp/faker
 symfony console doctrine:fixture:load
+symfony console doctrine:fixture:load --append
 ```
 
 - Créer un controller Home avec requete

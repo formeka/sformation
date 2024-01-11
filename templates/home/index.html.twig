@@ -2,4 +2,17 @@
 
 {% block body %}
 {{ dump(formations) }}
+
+{% for formation in formations %}
+    
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ formation.titre }}</h5>
+    <p class="card-text">{{ formation.description }}.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+{% endfor %}
+
 {% endblock %}
