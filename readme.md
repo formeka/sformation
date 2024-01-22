@@ -52,7 +52,7 @@ DATABASE_URL="mysql://login:password@127.0.0.1:3306/database?serverVersion=10.11
 
 ```
 symfony console doctrine:database:create
-symfony console make:migration ou symfony console doctrine:database:migrations:diff 
+symfony console make:migration ou symfony console doctrine:migrations:diff 
 symfony console doctrine:database:migrate
 ```
 
