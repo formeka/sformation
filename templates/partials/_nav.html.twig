@@ -20,11 +20,13 @@
 
 				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-					{% if is_granted('ROLE_ADMIN') %}
+					<a href="{{ path('app_logout') }}" class="{{ is_granted('ROLE_ADMIN')  ? 'btn btn-danger' : 'btn btn-primary' }}">Déconnexion</a>
+
+					{# {% if is_granted('ROLE_ADMIN') %}
 						<a href="{{ path('app_logout') }}" class="btn btn-danger">Déconnexion</a>
 					{% else %}
 						<a href="{{ path('app_logout') }}" class="btn btn-primary"> Déconnexion</a>
-					{% endif %}
+					{% endif %} #}
 				
 				{% else %}
 					
