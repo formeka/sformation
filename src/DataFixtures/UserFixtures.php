@@ -24,7 +24,7 @@ class UserFixtures extends Fixture
             $user->setRoles($faker->randomElement([['ROLE_USER'], ['ROLE_ADMIN']]));
             $user->setPassword($faker->password());
 
-            $manager->persist($user);
+            //$manager->persist($user);
         endfor;
 
         //$manager->flush();
