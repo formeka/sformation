@@ -31,7 +31,7 @@ Réaliser ce site web avec une installation compléte de **Symfony**.
 
 ## Design
 
-Utiliser le framework css **bosstrap** pour effectu afficher les formations sous formes de **cards**.
+Utiliser le framework css **bosstrap** pour afficher les formations sous formes de **cards**.
 
 Bon travail.
 
